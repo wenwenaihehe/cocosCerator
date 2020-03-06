@@ -1,0 +1,40 @@
+{
+   "checksum": "6bd8ab2a6fc91cc0b28b6e9c252167fa",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13227885405584169",
+            "guid": "b9f260bb-743a-410c-97e6-579e827ce2b5",
+            "id": "5",
+            "name": "接触creator四个月整理的资源。（3.31更新） - Creator - Cocos中文社区",
+            "type": "url",
+            "url": "https://forum.cocos.org/t/creator-3-31/39917"
+         } ],
+         "date_added": "13227884709651210",
+         "date_modified": "13227885405584169",
+         "guid": "00000000-0000-4000-A000-000000000002",
+         "id": "1",
+         "name": "书签栏",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13227884709651217",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000003",
+         "id": "2",
+         "name": "其他书签",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13227884709651218",
+         "date_modified": "0",
+         "guid": "00000000-0000-4000-A000-000000000004",
+         "id": "3",
+         "name": "移动设备书签",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
