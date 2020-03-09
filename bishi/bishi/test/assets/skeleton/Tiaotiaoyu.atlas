@@ -1,0 +1,76 @@
+
+Tiaotiaoyu.png
+size: 256,256
+format: RGBA4444
+filter: Linear,Linear
+repeat: none
+tty_jiao1
+  rotate: false
+  xy: 120, 3
+  size: 35, 11
+  orig: 35, 11
+  offset: 0, 0
+  index: -1
+tty_jiao2
+  rotate: false
+  xy: 157, 6
+  size: 35, 11
+  orig: 35, 11
+  offset: 0, 0
+  index: -1
+tty_shou1
+  rotate: true
+  xy: 214, 208
+  size: 46, 34
+  orig: 46, 34
+  offset: 0, 0
+  index: -1
+tty_shou2
+  rotate: true
+  xy: 214, 157
+  size: 49, 30
+  orig: 49, 30
+  offset: 0, 0
+  index: -1
+tty_st
+  rotate: true
+  xy: 2, 16
+  size: 78, 152
+  orig: 78, 152
+  offset: 0, 0
+  index: -1
+tty_tou
+  rotate: false
+  xy: 2, 96
+  size: 152, 158
+  orig: 152, 158
+  offset: 0, 0
+  index: -1
+tty_yj1
+  rotate: true
+  xy: 156, 138
+  size: 116, 56
+  orig: 116, 56
+  offset: 0, 0
+  index: -1
+tty_yj2
+  rotate: true
+  xy: 207, 20
+  size: 116, 41
+  orig: 116, 41
+  offset: 0, 0
+  index: -1
+tty_yj3
+  rotate: false
+  xy: 2, 2
+  size: 116, 12
+  orig: 116, 12
+  offset: 0, 0
+  index: -1
+tty_zui
+  rotate: true
+  xy: 156, 19
+  size: 117, 49
+  orig: 117, 49
+  offset: 0, 0
+  index: -1

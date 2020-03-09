@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "d3c996d7-72c7-45a6-8b8d-a8e4286aad7a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 256,
+  "height": 256,
+  "platformSettings": {},
+  "subMetas": {
+    "63dbeef.SAUSAGE_FISH_2": {
+      "ver": "1.0.4",
+      "uuid": "34a67564-08c2-4e64-86c4-0268b97bfb82",
+      "rawTextureUuid": "d3c996d7-72c7-45a6-8b8d-a8e4286aad7a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2,
+      "offsetY": -11,
+      "trimX": 15,
+      "trimY": 98,
+      "width": 230,
+      "height": 82,
+      "rawWidth": 256,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
