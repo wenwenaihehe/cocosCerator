@@ -24,19 +24,33 @@ cc.Class({
         //         this._bar = value;
         //     }
         // },
+    
     },
 
-    // LIFE-CYCLE CALLBACKS:
-
+    // LIFE-CYCLE CALLBACKS
     onLoad () {
-        framework.UIManager.loadPrefab('Preb/Snake.prefab');
     },
-
+    init:function(posx , posy , postionx , postiony){
+        this.pos = {};
+        this.Position = {};
+        this.pos.x = posx;
+        this.pos.y = posy;
+        this.Position.x = postionx;
+        this.Position.y = postiony;
+        this.node.setPosition(cc.v2(postionx,postiony));
+        this.SpriteNode = this.node.getComponent(cc.Sprite);
+        framework.UIManager.loadTexture("Texture/apple.png",this.SpriteNode,cc.SpriteFrame);
+        this.node.active = true;
+        var a = 1;
+      //  this.removefromparent();
+    },      
+    removefromparent:function(){
+        this.node.removeFromParent();
+    },
     start () {
-        this.GameLayer = this.node.getChildByName("GameLayer");
-        this.GameLayer.getComponent('GameLayer').init(40,40);
-        this.GameLayer.getComponent('GameLayer').startGame();
+        var t =1;
     },
+    
 
     // update (dt) {},
 });

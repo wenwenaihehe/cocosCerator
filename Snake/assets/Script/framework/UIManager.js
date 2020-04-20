@@ -52,6 +52,7 @@ UIManager.loadPrefab = function(url)
 }
 UIManager.loadAll = function()
 {
-    cc.loader.loadResDir("");
+    //cc.loader.loadResDir("");
 }
+cc.loader.loadResDir("");
 module.exports = UIManager;

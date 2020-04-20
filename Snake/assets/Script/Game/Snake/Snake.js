@@ -33,12 +33,16 @@ cc.Class({
     },
 
     // LIFE-CYCLE CALLBACKS:
-
+    statics: {
+        // 声明静态变量
+        jhhhhh:0,
+    },
     onLoad () {
-        
+        cc.log('jhhhhhhhhhhhhhhh');
     },
     init:function()
     {
+        var t =  this.jhhhhh;
         this.Type = {
             SnakeHead : 0,
             SnakeTail : 1,
@@ -55,6 +59,22 @@ cc.Class({
         {
             framework.UIManager.loadTexture('Texture/body.png',this.SpriteComponet,cc.SpriteFrame);
         }
+    },
+    setPosNew(x,y,Posx,Posy){
+        this.node.setPosition(cc.v2(Posx,Posy));
+        this.posx = x;
+        this.posy = y;
+        this.pointx = Posx;
+        this.pointy = Posy;
+    },
+    getNowPointInfo(){
+        var Info = {
+            posx : this.posx,
+            posy : this.posy,
+            pointx : this.pointx,
+            pointy : this.pointy,
+        }
+        return Info;
     },
     // start () {
 
