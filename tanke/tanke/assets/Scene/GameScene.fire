@@ -174,7 +174,7 @@
       "array": [
         0,
         0,
-        418.2902700278839,
+        411.3620667976084,
         0,
         0,
         0,
@@ -609,9 +609,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 230,
+      "g": 230,
+      "b": 230,
       "a": 255
     },
     "_contentSize": {
@@ -668,8 +668,8 @@
     "clickEvents": [],
     "_N$interactable": true,
     "_N$enableAutoGrayEffect": false,
-    "_N$transition": 2,
-    "transition": 2,
+    "_N$transition": 3,
+    "transition": 3,
     "_N$normalColor": {
       "__type__": "cc.Color",
       "r": 230,
@@ -781,7 +781,7 @@
       "__id__": 13
     },
     "asset": {
-      "__uuid__": "dc933ef1-ef56-45e6-ac06-8b8f769d4c3d"
+      "__uuid__": "3b582db7-ba58-4b32-98f6-da5b66bb1eea"
     },
     "fileId": "34cNWqtdJDWKPWKDYpSgOW",
     "sync": false

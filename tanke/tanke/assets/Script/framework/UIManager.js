@@ -29,6 +29,8 @@ UIManager.seekNodeByName = function(node,Name)
     }
     return null;
 };
+
+//针对普通的loadTexture
 UIManager.loadTexture = function(url , node , Type)
 {
     cc.loader.loadRes(url,function(error,Image)
@@ -46,6 +48,20 @@ UIManager.loadTexture = function(url , node , Type)
         }
     })
 };
+UIManager.loadButtonTexture = function(url)
+{
+    
+}
+UIManager.getTexture = function(url,Type)
+{
+    var Texture = cc.loader.getRes(url);
+    if(Texture) 
+    {
+        return new Type(Texture);
+    }
+    return null;
+}
+
 UIManager.loadPrefab = function(url)
 {
     return cc.loader.getRes(url);

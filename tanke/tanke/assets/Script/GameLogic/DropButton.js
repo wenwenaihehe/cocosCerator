@@ -38,15 +38,22 @@ cc.Class({
         this.node.setPosition(position);
         this.Speed = Speed;
         this.SpeedPoint = SpeedPoint;
+        this.isVaild = false;
+        this.button = this.node.getComponent(cc.Button);
+        var Texture;
         if(index == 0)
         {
-            framework.UIManager.loadTexture('border.png',this.node.getComponent(cc.Sprite),cc.SpriteFrame);
+            Texture = framework.UIManager.getTexture('border.png',cc.SpriteFrame);
         }
         else
         {
-            framework.UIManager.loadTexture('Write.png',this.node.getComponent(cc.Sprite),cc.SpriteFrame);
+            Texture = framework.UIManager.getTexture('Write.png',cc.SpriteFrame);
         }
-        this.node.on('click',onClickButton,this);   
+        this.button.normalSprite = Texture;
+        this.button.pressedSprite = Texture;
+        this.button.disabledSprite = Texture;
+        this.node.on('click',this.onClickButton,this);   
+        this.node.active = true;
     },
     setSpeed:function(Speed){
         this.Speed = Speed;
@@ -58,8 +65,8 @@ cc.Class({
         this.node.setPosition(cc.v2(this.position.x,this.position.y));
     },
     onClickButton:function(event){
-11111111111111111111
-    }
+        this.isVaild = true;
+    },
     start () {
 
     },
