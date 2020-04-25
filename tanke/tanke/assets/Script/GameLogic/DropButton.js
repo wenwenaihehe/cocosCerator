@@ -28,8 +28,38 @@ cc.Class({
 
     // LIFE-CYCLE CALLBACKS:
 
-    // onLoad () {},
+    onLoad () {
+        //cc.Node
+        this.position = this.node.getPosition(cc.Vec2);
+        this.Speed = cc.v2(0,-1);
+        
+    },
+    init:function(Speed,SpeedPoint,position,index){
+        this.node.setPosition(position);
+        this.Speed = Speed;
+        this.SpeedPoint = SpeedPoint;
+        if(index == 0)
+        {
+            framework.UIManager.loadTexture('border.png',this.node.getComponent(cc.Sprite),cc.SpriteFrame);
+        }
+        else
+        {
+            framework.UIManager.loadTexture('Write.png',this.node.getComponent(cc.Sprite),cc.SpriteFrame);
+        }
+        this.node.on('click',onClickButton,this);   
+    },
+    setSpeed:function(Speed){
+        this.Speed = Speed;
+    },
+    updatePosition:function(){
+        this.position.x = this.position.x + this.Speed.x;
+        this.position.y = this.position.y + this.Speed.y;
+        
+        this.node.setPosition(cc.v2(this.position.x,this.position.y));
+    },
+    onClickButton:function(evetn){
 
+    }
     start () {
 
     },
