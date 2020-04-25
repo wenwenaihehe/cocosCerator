@@ -57,8 +57,8 @@ cc.Class({
         
         this.node.setPosition(cc.v2(this.position.x,this.position.y));
     },
-    onClickButton:function(evetn){
-
+    onClickButton:function(event){
+11111111111111111111
     }
     start () {
 
