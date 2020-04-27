@@ -4,7 +4,7 @@
 //  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-var framework = {};
+window.framework = {};
 framework.UIManager = require('./framework/UIManager');
 framework.EventListenerTarget = require('./framework/EventListenerTarget');
 cc.Class({
@@ -42,11 +42,9 @@ cc.Class({
         {
             this.button.on('click',this.GoGameScene,this);
         }
-        framework.EventListenerTarget.addEventListener('fffff',function(event){
-            var a = this;
-            var t = event.detail;
-            cc.log(111);
-        },this);
+        // framework.EventListenerTarget.addEventListener('oneButtonClick',function(event){
+        //     cc.log(111);
+        // },this);
     },
 
     GoGameScene:function(){ 
@@ -54,11 +52,11 @@ cc.Class({
     },
     start () {
         //cc.director.loadScene('LobbyScene');
-        var evetnt = {
-            a :1,
-            b :2,
-        }
-        framework.EventListenerTarget.EmitEvent('fffff','11111');
+        // var Node = cc.instantiate(framework.UIManager.loadPrefab('prefab/DropButton.prefab'));
+        // var nodeb = Node.getComponent('DropButton');
+        // nodeb.init(0,0,cc.v2(300,300),0);
+        // this.node.addChild(Node);
+        //this.schedule(this.upDatePos,0.2);
     },
 
     // update (dt) {},
