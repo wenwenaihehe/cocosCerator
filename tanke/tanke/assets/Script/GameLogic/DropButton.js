@@ -31,7 +31,7 @@ cc.Class({
     onLoad () {
         //cc.Node
         this.position = this.node.getPosition(cc.Vec2);
-        this.Speed = cc.v2(0,-1);
+        this.Speed = 10;
         
     },
     init:function(Speed,SpeedPoint,position,index){
@@ -43,17 +43,15 @@ cc.Class({
         var Texture;
         if(index == 0)
         {
-            Texture = framework.UIManager.getTexture('border.png',cc.SpriteFrame);
+            framework.UIManager.loadButtonTexture(this.button,'border.png','border.png','border.png',cc.SpriteFrame);
         }
         else
         {
-            Texture = framework.UIManager.getTexture('Write.png',cc.SpriteFrame);
+            framework.UIManager.loadButtonTexture(this.button,'Write.png','Write.png','Write.png',cc.SpriteFrame);
         }
-        this.button.normalSprite = Texture;
-        this.button.pressedSprite = Texture;
-        this.button.disabledSprite = Texture;
         this.node.on('click',this.onClickButton,this);   
         this.node.active = true;
+        //framework.EventListenerTarget.EmitEvent('fffff','11111');
     },
     setSpeed:function(Speed){
         this.Speed = Speed;
