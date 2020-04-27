@@ -48,9 +48,24 @@ UIManager.loadTexture = function(url , node , Type)
         }
     })
 };
-UIManager.loadButtonTexture = function(url)
-{
-
+UIManager.loadButtonTexture = function(button,url1,url2,url3,Type)
+{   
+    Type = Type?Type:cc.SpriteFrame;
+    var Texture1 = cc.loader.getRes(url1);
+    if(Texture1)
+    {
+        button.normalSprite = new Type(Texture1);
+    }
+    var Texture2 = cc.loader.getRes(url2);
+    if(Texture2)
+    {
+        button.pressedSprite = new Type(Texture2);
+    }
+    var Texture3 = cc.loader.getRes(url3)
+    if(Texture3)
+    {
+        button.disabledSprite = new Type(Texture3);
+    }
 }
 UIManager.getTexture = function(url,Type)
 {
