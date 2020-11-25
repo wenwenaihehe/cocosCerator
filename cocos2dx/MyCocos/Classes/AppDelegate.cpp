@@ -23,8 +23,9 @@
  ****************************************************************************/
 
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
-
+#include "scripting/lua-bindings/manual/CCLuaEngine.h"
+#include "cocos2d.h"
+#include "scripting/lua-bindings/manual/lua_module_register.h"
 // #define USE_AUDIO_ENGINE 1
 // #define USE_SIMPLE_AUDIO_ENGINE 1
 
@@ -117,12 +118,33 @@ bool AppDelegate::applicationDidFinishLaunching() {
 
     register_all_packages();
 
-    // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    
+//    // create a scene. it's an autorelease object
+//    auto scene = HelloWorld::createScene();
+//
+//    // run
+//    director->runWithScene(scene);
+    auto engine = LuaEngine::getInstance();
+    ScriptEngineManager::getInstance()->setScriptEngine(engine);
+    lua_State* L = engine->getLuaStack()->getLuaState();
+    lua_module_register(L);
+    
+    LuaStack* stack = engine->getLuaStack();
+    stack->setXXTEAKeyAndSign("2dxLua", strlen("2dxLua"), "XXTEA", strlen("XXTEA"));
 
-    // run
-    director->runWithScene(scene);
-
+    //register custom function
+    //LuaStack* stack = engine->getLuaStack();
+    //register_custom_function(stack->getLuaState());
+    
+#if CC_64BITS
+    FileUtils::getInstance()->addSearchPath("src/64bit");
+#endif
+    FileUtils::getInstance()->addSearchPath("src");
+    FileUtils::getInstance()->addSearchPath("res");
+    if (engine->executeScriptFile("main.lua"))
+    {
+        return false;
+    }
     return true;
 }
 

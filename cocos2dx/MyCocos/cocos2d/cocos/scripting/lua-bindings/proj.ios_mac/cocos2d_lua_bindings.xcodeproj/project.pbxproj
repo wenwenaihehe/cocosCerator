@@ -436,6 +436,8 @@
 		BA0CBB5F1BB0756F00003364 /* CCComponentLua.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA0CBB5C1BB0756F00003364 /* CCComponentLua.cpp */; };
 		BA0CBB601BB0756F00003364 /* CCComponentLua.h in Headers */ = {isa = PBXBuildFile; fileRef = BA0CBB5D1BB0756F00003364 /* CCComponentLua.h */; };
 		BA0CBB611BB0756F00003364 /* CCComponentLua.h in Headers */ = {isa = PBXBuildFile; fileRef = BA0CBB5D1BB0756F00003364 /* CCComponentLua.h */; };
+		DDCE6776256EBE4400B9F9C6 /* lua.h in Sources */ = {isa = PBXBuildFile; fileRef = 1ABCA1E718CD8F470087CE3A /* lua.h */; };
+		DDCE677A256EBE6800B9F9C6 /* lua.h in Sources */ = {isa = PBXBuildFile; fileRef = 1ABCA1E718CD8F470087CE3A /* lua.h */; };
 		ED1AA90B215DF5F3004ABA9F /* lua_downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1AA909215DF5F3004ABA9F /* lua_downloader.h */; };
 		ED1AA90C215DF5F3004ABA9F /* lua_downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1AA909215DF5F3004ABA9F /* lua_downloader.h */; };
 		ED1AA90D215DF5F3004ABA9F /* lua_downloader.h in Headers */ = {isa = PBXBuildFile; fileRef = ED1AA909215DF5F3004ABA9F /* lua_downloader.h */; };
@@ -1307,6 +1309,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 1551A334158F2AB200E66CFE;
@@ -1326,6 +1329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCE6776256EBE4400B9F9C6 /* lua.h in Sources */,
 				15415A7219A718FB004F1E71 /* lua_cocos2dx_3d_auto.cpp in Sources */,
 				15415A7319A718FB004F1E71 /* lua_cocos2dx_cocosbuilder_auto.cpp in Sources */,
 				150906F219D556CE002C4D97 /* lua_cocos2dx_audioengine_manual.cpp in Sources */,
@@ -1408,6 +1412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCE677A256EBE6800B9F9C6 /* lua.h in Sources */,
 				ADAC23ED1C2044A60049A6A2 /* lua_module_register.cpp in Sources */,
 				15415AC619A71A53004F1E71 /* select.c in Sources */,
 				15A561ED1B00A3F1005D4720 /* lua_cocos2dx_physics3d_manual.cpp in Sources */,
