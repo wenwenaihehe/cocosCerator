@@ -13,15 +13,19 @@ require "cocos.init"
 --如果已经存在 __G__TRACKBACK__ 请将 debugXpCall 直接加入 __G__TRACKBACK__ 即可
 --__G__TRACKBACK__ 方法不是必须 debugXpCall是实现的是在lua 脚本调用错误时进行代码错误定位 
 
-__G__TRACKBACK__ = function(msg)
+function __G__TRACKBACK__(msg)
     local msg = debug.traceback(msg, 3)
-    print(msg)
+    print("--------------------------------")
+    --print(msg)
+    print("LUA ERROR: " .. tostring(msg).. "\n")
+    print("---------------------------------------");
+
     debugXpCall(); 
     return msg 
 end
 local function main()
     --require("app.MyApp"):create():run()
-    local t = require("test.test"):create()
+    require("LobbyScene.initConfig")
 end
 local status, msg = xpcall(main, __G__TRACKBACK__)
 if not status then
